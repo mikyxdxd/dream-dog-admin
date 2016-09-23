@@ -1,0 +1,117 @@
+<div id="user">
+
+  <div class="content" v-if="user">
+    <div id="content_top">
+      <div id="user_info">
+          <div id="user_avatar"><img :src="user.avatar"></div>
+          <div>{{user.name}}</div>
+          <div id="sub">{{user.email}}</div>
+      </div>
+    </div>
+    <div id="content_bottom" class="container">
+      <div class="ui card info_section">
+        <div class="content">
+          <div class="ctr">
+            <div id="editCtr"  v-show="!showEdit">
+              <button class="ui green primary button" @click="showEdit=true">
+                Edit
+              </button>
+            </div>
+            <div id="saveCtr"  v-show="showEdit">
+              <button class="ui green button" @click="updateUser()">
+                Update
+              </button>
+              <button class="ui button" @click="showEdit=false">
+                Cancel
+              </button>
+            </div>
+          </div>
+          <div class="sec">Avatar:</div>
+          <div class="sec">Id: {{user.id}}</div>
+          <div class="sec">Username: {{user.name}}</div>
+          <div class="sec">Name:
+            <span  v-show="!showEdit">{{user.name}}</span>
+            <input v-show="showEdit" v-model="userCpy.name"></input>
+          </div>
+          <div class="sec">Email:
+            <span  v-show="!showEdit">{{user.email}}</span>
+            <input v-show="showEdit" v-model="userCpy.email"></input>
+          </div>
+          <div class="sec">Role: {{user.role}}</div>
+          <div class="sec">Status: {{user.status}}</div>
+          <div class="sec">Promotion Level: {{user.promotionLevel}}</div>
+          <div class="sec">Website:
+            <span  v-show="!showEdit">{{user.website}}</span>
+            <input v-show="showEdit" v-model="userCpy.website"></input>
+          </div>
+          <div class="sec">Location:
+
+            <div id="locationEdit" v-show="showEdit">
+              <div class="ui checkbox">
+                <input type="checkbox" name="example" @click="showLocation = !showLocation;">
+                <label>Show Location</label>
+              </div>
+              <div v-show="showLocation">
+              Address<input v-model="userCpy.location.address"><br>
+              Latitude<input v-model="userCpy.location.latitude"><br>
+              Longitude<input v-model="userCpy.location.longitude">
+              </div>
+            </div>
+
+
+          </div>
+          <div class="sec">Bio:
+            <span  v-show="!showEdit">{{user.bio}}</span>
+            <textarea v-show="showEdit" v-model="userCpy.bio"></textarea>
+          </div>
+          <div class="sec">Stats:
+            <div class="sub_list">
+               <div>numOfBookmarks: {{user.stats.numOfBookmarks}}</div>
+               <div>numOfFollowers: {{user.stats.numOfFollowers}}</div>
+               <div>numOfFollowings: {{user.stats.numOfFollowings}}</div>
+               <div>numOfMedia: {{user.stats.numOfMedia}}</div>
+              <div>numOfPubEvents: {{user.stats.numOfPubEvents}}</div>
+              <div>numOfTotalEvents: {{user.stats.numOfTotalEvents}}</div>
+              <div>numOfTotalLikes: {{user.stats.numOfTotalLikes}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui card info_section">
+        <div class="content showDogs" v-if="!showDogs" @click="showDogs=true">
+           Dogs
+           <i class="caret down icon"></i>
+           <!--<dogs></dogs>-->
+         </div>
+
+        <div class="content" v-if="showDogs" >
+            <dogs></dogs>
+        </div>
+      </div>
+      <div class="ui card info_section">
+        <div class="content Albums" v-if="!showAlbums" @click="showAlbums=true">
+          Albums
+          <i class="caret down icon"></i>
+          </div>
+          <div class="content" v-if="showAlbums" >
+            <albums></albums>
+            <!--123-->
+        </div>
+
+      </div>
+      <div class="ui card info_section">
+        <div class="content Albums" v-if="!showAlbums" @click="showAlbums=true">
+          Albums
+          <i class="caret down icon"></i>
+        </div>
+        <div class="content" v-if="showAlbums" >
+          <medias source="user"></medias>
+          <!--123-->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

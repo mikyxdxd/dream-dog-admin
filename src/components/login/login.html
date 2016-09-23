@@ -1,0 +1,24 @@
+<div id="login">
+  <div id="bg"></div>
+  <div class="ui inverted segment">
+    <div class="ui inverted form">
+        <div class="field">
+          <label>Username</label>
+          <input placeholder="Username" v-model="username" type="text">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input placeholder="Password" v-model="password" type="password">
+        </div>
+      <div class="inline field">
+        <!--<div class="ui checkbox">-->
+          <!--<input type="checkbox" tabindex="0" class="hidden">-->
+          <!--<label>I agree to the terms and conditions</label>-->
+        <!--</div>-->
+      </div>
+      <div id="brn">
+      <div class="ui submit button" :class="{ 'loading': fetchingUser}" @click="login">Submit</div>
+      </div>
+    </div>
+  </div>
+</div>

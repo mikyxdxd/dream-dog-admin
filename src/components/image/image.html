@@ -1,0 +1,52 @@
+<div id="image">
+
+  <div id=bg>
+
+    <div id="content">
+
+      <div id="content_image">
+
+        <img :src="currmedia.retina.url">
+
+      </div>
+
+      <div id="content_info">
+
+        <div id="close"><i class="icon remove" @click="currmedia = null"></i></div>
+
+        <div class="info"><span class="t">Caption</span>
+
+          <div class="con"><div><input v-model="currmedia.caption"></div></div>
+
+        </div>
+        <div class="info"><span class="t">description</span>
+          <div class="con"><div ><input v-model="currmedia.bannerImage"></div></div>
+        </div>
+        <div class="info"><span class="t">retina</span>
+          <div class="con"><div><input v-model="currmedia.retina.url"></div></div>
+        </div>
+        <div class="info"><span class="t">dog</span>
+          <span>{{currmedia.dog.name + ' ' + currmedia.dog.id}}</span>
+        </div>
+        <div class="info"><span class="t">createdDate</span>
+          <span>{{currmedia.createdDate}}</span>
+        </div>
+        <div class="info"><span class="t">shotTime</span>
+          <span>{{currmedia.shotTime}}</span>
+        </div>
+
+        <div id="image_ctrs">
+          <button class="ui primary button" @click="updateMedia()">Update</button>
+        </div>
+      </div>
+
+
+      <!--{{currmedia|json}}-->
+
+    </div>
+
+
+
+  </div>
+
+</div>

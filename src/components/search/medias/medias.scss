@@ -1,0 +1,28 @@
+#medias{
+  #medias_ctr{
+
+    text-align: right;
+    margin-bottom: 5px;
+  }
+  #media_ctr{
+
+    padding: 0.5em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+  }
+  #media_list{
+    .one_media{
+      display: inline-block;
+      cursor: pointer;
+      width:32%;
+      margin-left: 1%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      img{
+        width:100%;
+      }
+    }
+  }
+}

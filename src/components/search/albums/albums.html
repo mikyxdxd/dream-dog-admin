@@ -1,0 +1,23 @@
+<div id="albums">
+  <div id="albums_list">
+    <div id="albums_ctr">
+
+      <button v-show="!showEdit" @click="showEdit = true" class="ui primary button">Edit</button>
+      <button v-show="showEdit" @click="showEdit = false" class="ui button">Cancel</button>
+
+    </div>
+    <a class="one_album" v-for="album in albumsList" v-link="{path:`/album/${album.id}`}">
+      <img class="avatar" :src="album.coverImageIcon"><div class="name">{{album.caption}}</div>
+      <div class="album_info">
+        <div>Id: {{album.id}}</div>
+        <div>createdDate: {{album.createdDate}}</div>
+        <div id="album_ctr" v-show="showEdit"><button :class="{'loading':deleting}" class="ui red tiny button" @click.stop.prevent="deleteDogViaId(dog,$index)">Delete</button></div>
+        <!--<div>gender: {{albumn.gender}}</div>-->
+      </div>
+      <!--<a class="ui image label">-->
+      <!--<img :src="albumn.avatar">-->
+      <!--{{albumn.name}}-->
+      <!--</a>-->
+    </a>
+  </div>
+</div>

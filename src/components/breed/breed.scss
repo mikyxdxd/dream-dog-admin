@@ -1,0 +1,108 @@
+#breed{
+
+  #breed_top{
+
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    background: linear-gradient(-45deg, #ffc0cb 0, #6ea0b8 100%);
+    #breed_info {
+      text-align: center;
+      color: white;
+      font-size: 1.3em;
+      margin: auto;
+      .info{
+        img{
+          border: 0;
+          width: 150px;
+          padding: 1px;
+          border-radius: 0px;
+          background: #f5f5f5;
+        }
+      }
+    }
+  }
+
+  #breed_bottom{
+
+    padding: 0.7em;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    background: #fafafa;
+
+
+    textarea{
+
+      width:100%;
+      height:200px;
+      padding: 0.5em;
+    }
+
+    #ctr{
+
+      text-align: right;
+    }
+
+    .info_section{
+
+      vertical-align: top;
+      margin: 0;
+      width: 100%;
+      display: block;
+      box-shadow: none;
+      border-radius: 0px;
+      margin-top: 10px;
+      border: none;
+      .content{
+
+
+
+      }
+    }
+
+    .chara{
+      vertical-align: bottom;
+      display: inline-block;
+      padding: 0.5em;
+      width:23%;
+      margin-left: 1%;
+      background: #fafafa;
+      margin-bottom: 20px;
+
+      .c_sec{
+        padding: 0.5em;
+        .title{
+          font-weight: 500;
+          font-size: 1.05em;
+          margin-right: 2px;
+        }
+        input{
+          border: none;
+          background: white;
+          border-bottom: 1px solid #dad9d9;
+          margin-left: 5px;
+          &:focus,&:active{
+            outline-width: 0px;
+          }
+        }
+      }
+      label{
+
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  //.sec{
+  //  display: block;
+  //  width: 300px;
+  //  margin: auto;
+  //  img{
+  //    width:100%;
+  //  }
+  //  input{
+  //    width:300px;
+  //  }
+  //}
+
+}

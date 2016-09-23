@@ -1,0 +1,23 @@
+<div id="dogs">
+  <div id="dogs_list">
+    <div id="dogs_ctr">
+
+      <button v-show="!showEdit" @click="showEdit = true" class="ui primary button">Edit</button>
+      <button v-show="showEdit" @click="showEdit = false" class="ui button">Cancel</button>
+
+    </div>
+    <a v-if="dog.breeds.length" class="one_dog" v-for="dog in dogsList" v-link="{path:`/dog/${dog.id}`}">
+      <img class="avatar" :src="dog.avatar"><div class="name">{{dog.name}}</div>
+      <div class="dog_info">
+        <div>Id: {{dog.id}}</div>
+        <div>createdDate: {{dog.createdDate}}</div>
+        <div id="dog_ctr" v-show="showEdit"><button :class="{'loading':deleting}" class="ui red tiny button" @click.stop.prevent="deleteDogViaId(dog,$index)">Delete</button></div>
+        <!--<div>gender: {{dog.gender}}</div>-->
+      </div>
+      <!--<a class="ui image label">-->
+        <!--<img :src="dog.avatar">-->
+        <!--{{dog.name}}-->
+      <!--</a>-->
+    </a>
+  </div>
+</div>

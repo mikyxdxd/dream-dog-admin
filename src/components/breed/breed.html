@@ -1,0 +1,49 @@
+<div id="breed">
+  <div id="breed_top" v-if="breed">
+      <div id="breed_info">
+        <div class="info"><img :src="breed.bannerImage"></div>
+        <div class="info">{{breed.type}}</div>
+        <div class="info">{{breed.id}}</div>
+      </div>
+  </div>
+  <div id="breed_bottom" class="container" v-if="breed">
+    <div id="ctr"><button class="ui green button" :class="{'loading':updating}" @click="updateBreed()">Save</button></div>
+    <div class="ui card info_section">
+          <div class="content">
+            <textarea v-model="breed.description"></textarea>
+          </div>
+          <div>
+            <div class="chara" v-for="chara in breed.characteristics">
+              <div class="c_sec">
+                <span class="title">Name:</span><span class="content">{{chara.name}}</span>
+              </div>
+              <div class="c_sec">
+                 <span class="title">Category:</span><span class="content">{{chara.category}}</span>
+              </div>
+              <div class="c_sec">
+                 <span class="title">Description:</span><div>
+                {{chara.description}}
+              </div>
+              </div>
+              <div class="c_sec">
+                 <span class="title">Highlight:</span>
+                <div class="ui toggle checkbox">
+                  <input type="checkbox" name="public" :checked="chara.highlight" @change="reverse(chara,'hightlight')">
+                  <label>{{chara.highlight}}</label>
+                </div>
+              </div>
+              <div class="c_sec">
+                <span class="title">Show:</span>
+                <div class="ui toggle checkbox">
+                  <input type="checkbox" name="public" :checked="chara.show"  @change="reverse(chara,'show')">
+                  <label>{{chara.show}}</label>
+                </div>
+              </div>
+              <div class="c_sec">
+                <span class="title">Rating:</span><input v-model="chara.rating">
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>

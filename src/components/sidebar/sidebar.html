@@ -1,0 +1,21 @@
+ <div class="ui left fixed inverted vertical menu" id="sidebar">
+    <div class="item" id="caption">
+      <b>DreamDog Admin</b>
+    </div>
+    <a class="item" id="userInfo" v-if="user">
+
+      <div class="ui blue image label">
+        <img :src="user.avatar">
+        {{user.name}}
+        <div class="detail">{{user.role}}</div>
+        <br/>
+        <div class="detail_info">Email: {{user.email}}<br/>Id: {{user.id}}</div>
+      </div>
+
+      <!--{{user.role}}-->
+    </a>
+    <a class="item" v-link="{path:'/breeds'}">Breeds</a>
+    <a class="item" v-link="{path:'/users'}">Users</a>
+    <search></search>
+  </div>
+

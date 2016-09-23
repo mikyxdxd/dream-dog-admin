@@ -1,0 +1,93 @@
+<div id="dog">
+  <div class="content" v-if="dog">
+    <div id="content_top">
+      <div id="dog_info">
+          <div id="dog_avatar" :style="{'background':'url(' + dog.avatar + ')'}"></div>
+          <div>{{dog.name}}</div>
+      </div>
+    </div>
+    <div id="content_bottom">
+      <div class="ui card info_section">
+        <div class="content">
+          <div>Name:
+            <span v-show="!showEdit">{{dog.name}}</span>
+            <input v-show="showEdit" v-model="dogCpy.name">
+          </div>
+          <div>Id: <span>{{dog.id}}</span></div>
+          <div>Geneder:
+
+            <span v-show="!showEdit">{{dog.gender}}</span>
+            <input v-show="showEdit" v-model="dogCpy.gender">
+
+          </div>
+          <div>CreatedDate: <span>{{dog.createdDate}}</span></div>
+          <div>DogStatus:
+            <span v-show="!showEdit">{{dog.dogStatus}}</span>
+            <input v-show="showEdit" v-model="dogCpy.dogStatus">
+          </div>
+          <div>HouseTrained: <span>{{dog.houseTrained}}</span>
+            <span v-show="!showEdit">{{dog.houseTrained}}</span>
+            <input v-show="showEdit" v-model="dogCpy.houseTrained"/>
+          </div>
+          <div>Size:
+            <span v-show="!showEdit">{{dog.size}}</span>
+            <input v-show="showEdit" v-model="dogCpy.size"/>
+          </div>
+          <div>specialNeeds:
+            <span v-show="!showEdit">{{dog.specialNeeds}}</span>
+            <input v-show="showEdit" v-model="dogCpy.specialNeeds"/></div>
+          <div>Owner: <span>{{dog.owner.name}}</span></div>
+          <div>Breeds:<input v-show="showEdit" v-model="newBreed"><i v-show="showEdit" class="icon plus" @click="addNewBreed(dogCpy)"></i>
+            <div id="breeds_list">
+              <div class="ui label" v-for="breed in dogCpy.breeds "><span>{{breed.name}}<i class="remove red icon" v-show="showEdit" @click="removeBreed($index)"></i></span></div>
+            </div>
+          </div>
+          <div>Description:
+
+            <span v-show="!showEdit">{{dog.description}}</span>
+            <textarea v-show="showEdit" v-model="dogCpy.description"></textarea>
+
+
+          </div>
+        </div>
+        <div class="ctr">
+          <div id="editCtr"  v-show="!showEdit">
+            <button class="ui green primary button" @click="showEdit=true">
+              Edit
+            </button>
+          </div>
+          <div id="saveCtr"  v-show="showEdit">
+            <button class="ui green button" :class="{'loading':updating}" @click="updateDogViaId(this)">
+              Update
+            </button>
+            <button class="ui button"  :class="{'loading':updating}" @click="showEdit=false">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="ui card info_section">
+        <div class="content showDogs" v-if="!showMedias" @click="showMedias=true">
+           Meidas
+           <i class="caret down icon"></i>
+           <!--<dogs></dogs>-->
+         </div>
+
+        <div class="content" v-if="showMedias" >
+            <medias source="dog"></medias>
+        </div>
+      </div>
+      <!--<div class="ui card info_section">-->
+        <!--<div class="content Albums" v-if="!showAlbums" @click="showAlbums=true">-->
+          <!--Albums-->
+          <!--<i class="caret down icon"></i>-->
+          <!--&lt;!&ndash;<dogs></dogs>&ndash;&gt;-->
+        <!--</div>-->
+
+      <!--</div>-->
+    </div>
+  </div>
+
+</div>

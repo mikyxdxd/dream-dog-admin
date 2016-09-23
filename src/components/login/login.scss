@@ -1,0 +1,36 @@
+#login{
+
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  #bg{
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #1b1c1d;
+  }
+  .segment{
+    width:500px;
+    margin: auto;
+    background: white;
+    label{
+      color:black;
+    }
+  }
+
+  #brn{
+
+    text-align: right;
+    .button{
+      font-weight: bold;
+    }
+  }
+}

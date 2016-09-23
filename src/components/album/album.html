@@ -1,0 +1,89 @@
+<div id="album">
+  <div class="content" v-if="album">
+    <div id="content_top">
+      <div id="album_info">
+        <div id="album_avatar" :style="{'background':'url(' + album.avatar + ')'}"></div>
+        <div>{{album.name}}</div>
+      </div>
+    </div>
+    <div id="content_bottom">
+      <div class="ui card info_section">
+        <div class="content">
+          <div><span class="t">Caption:</span>
+            <span v-show="!showEdit">{{album.caption}}</span>
+            <input v-show="showEdit" v-model="albumCpy.caption">
+          </div>
+          <div><span class="t">Cover Image:</span>
+            <!--<span v-show="!showEdit">{{album.caption}}</span>-->
+            <input v-show="showEdit" v-model="albumCpy.coverImageIcon">
+          </div>
+          <div><span class="t">Id: <span>{{album.id}}</span></div>
+          <div><span class="t">CreatedDate: <span>{{album.createdDate}}</span></div>
+          <div><span class="t">albumStatus:
+            <span v-show="!showEdit">{{album.albumStatus}}</span>
+            <input v-show="showEdit" v-model="albumCpy.albumStatus">
+          </div>
+          <div>shareType: <span>{{album.shareType}}</span>
+          </div>
+          <div>url:
+            <span v-show="!showEdit">{{album.url}}</span>
+            <input v-show="showEdit" v-model="albumCpy.url"/>
+          </div>
+          <div>tag:
+            <span v-show="!showEdit">{{album.tag}}</span>
+            <input v-show="showEdit" v-model="albumCpy.tag"/></div>
+          <div>Owner: <span>{{album.owner.name + ' ' + album.owner.id }}</span></div>
+          <!--<div>Tags:-->
+            <!--<div id="breeds_list">-->
+              <!--<div class="ui label" v-for="breed in albumCpy.breeds "><span>{{tag}}<i class="remove red icon" v-show="showEdit"></i></span></div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <div>Description:
+
+            <span v-show="!showEdit">{{album.description}}</span>
+            <textarea v-show="showEdit" v-model="albumCpy.description"></textarea>
+
+
+          </div>
+        </div>
+        <div class="ctr">
+          <div id="editCtr"  v-show="!showEdit">
+            <button class="ui green primary button" @click="showEdit=true">
+              Edit
+            </button>
+          </div>
+          <div id="saveCtr"  v-show="showEdit">
+            <button class="ui green button" :class="{'loading':updating}" @click="updateAlbumViaId()">
+              Update
+            </button>
+            <button class="ui button" :class="{'loading':updating}" @click="showEdit=false">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="ui card info_section">
+        <div class="content showalbums" v-if="!showMedias" @click="showMedias=true">
+          Meidas
+          <i class="caret down icon"></i>
+          <!--<albums></albums>-->
+        </div>
+
+        <div class="content" v-if="showMedias" >
+          <medias source="scope"></medias>
+        </div>
+      </div>
+      <!--<div class="ui card info_section">-->
+      <!--<div class="content Albums" v-if="!showAlbums" @click="showAlbums=true">-->
+      <!--Albums-->
+      <!--<i class="caret down icon"></i>-->
+      <!--&lt;!&ndash;<albums></albums>&ndash;&gt;-->
+      <!--</div>-->
+
+      <!--</div>-->
+    </div>
+  </div>
+
+</div>

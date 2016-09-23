@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dream Dog Admin</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,600,700" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+  </head>
+  <style>
+    body{
+      margin-left: 210px;
+      font-family: 'Dosis', sans-serif !important;
+    }
+    .ui{
+      font-family: 'Dosis', sans-serif !important;
+    }
+    content{
+      padding-left: 210px;
+      padding-top: 50px;
+      display: block;
+    }
+  </style>
+  <body>
+    <div id="app">
+      <div id="ready" v-show="ready">
+        <sidebar></sidebar>
+      <content>
+        <router-view></router-view>
+      </content>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  </body>
+</html>

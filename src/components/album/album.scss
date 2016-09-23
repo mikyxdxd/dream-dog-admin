@@ -1,0 +1,118 @@
+#album{
+
+  #content_top{
+
+    height: 170px;
+    width: 100%;
+    background: #fafafa;
+    display: flex;
+    background: linear-gradient(-45deg,#ffc0cb 0,#6ea0b8 100%);
+
+    #album_info{
+
+      text-align: center;
+      color: white;
+      font-size: 1.3em;
+      margin: auto;
+      #album_avatar{
+
+        width: 100px;
+        height: 100px;
+        background-size: cover !important;
+        background-position: 50%,50% !important;
+        border-radius: 50%;
+      }
+      #sub{
+        font-size: 0.9em;
+        color:grey;
+      }
+    }
+
+  }
+
+  #content_bottom{
+
+    padding: 0.7em;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    //div{
+    //  margin-top: 5px;
+    //}
+    .showalbums,.Albums{
+
+      background: #2185d0;
+      color: white;
+      font-weight: bold;
+      padding: 0.5em;
+      &:hover{
+        background: #1773b9;
+        cursor: pointer;
+      }
+
+    }
+
+    .Albums{
+
+      background: #d074a5;
+      &:hover{
+        background: #ad6089;
+        cursor: pointer;
+      }
+
+    }
+    .info_section{
+
+      vertical-align: top;
+      display: inline-block;
+      margin: 0;
+      width:45%;
+      margin-left: 2.5%;
+      margin-top:1.5%;
+      max-height: 450px;
+      overflow: scroll;
+      //span{
+      //  font-weight: bold;
+      //  color: grey;
+      //}
+    }
+
+    #breeds_list{
+
+      i{
+        font-size: 1.3em;
+        cursor: pointer;
+      }
+    }
+    .sub_list{
+
+      padding: 0em 1em;
+    }
+
+
+    input,textarea{
+
+      display: inline-block;
+      margin-top: 5px;
+      width: 70%;
+      margin-left: 5px;
+      border: none;
+      border-bottom: 1px dashed grey;
+      &:focus{
+        outline: none;
+      }
+    }
+    textarea{
+
+      border: 1px dashed grey;
+      margin-top: 15px;
+      height:200px;
+    }
+
+    .ctr{
+      padding: 1em;
+      padding-top: 0em;
+      text-align: right;
+    }
+
+  }
+}

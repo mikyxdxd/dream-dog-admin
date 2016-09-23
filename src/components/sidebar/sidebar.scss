@@ -1,0 +1,24 @@
+#sidebar{
+
+  #caption{
+
+    color:pink;
+    font-size: 1.2em;
+  }
+  #userInfo {
+    cursor: inherit;
+    background: #2185d0;
+    padding: 1.5em;
+    padding-left: inherit;
+    .label {
+
+      float: none;
+      margin-left: 0.5em;
+    }
+    .detail_info{
+      text-align: left;
+      padding: 0.2em;
+      margin-top: 0.7em;
+    }
+  }
+}

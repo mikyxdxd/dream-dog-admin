@@ -1,0 +1,64 @@
+#dogs{
+
+  #dogs_ctr{
+
+    text-align: right;
+    margin-bottom: 5px;
+  }
+
+  #dog_ctr{
+
+    padding: 0.5em;
+    text-align: right;
+  }
+
+  #dogs_list{
+
+    .one_dog{
+
+      border-bottom: 1px solid #fafafa;
+      transition: 0.2s;
+      padding: 0.5em;
+      display: inline-block;
+      width: 100%;
+      &:last-child{
+        border-bottom: 0px;
+      }
+
+      &:hover{
+
+        background: #fafafa;
+        cursor: pointer;
+        //margin-top:10px;
+        //margin-bottom: 10px;
+        //transition:0.5s;
+      }
+
+      .avatar{
+
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+      .name{
+
+        display: inline-block;
+        padding: 0.4em;
+        font-size: 1em;
+        margin-left: 0.5em;
+        font-weight: 600;
+        color: grey;
+      }
+
+      .dog_info{
+        font-size: 0.9em;
+        line-height: 1.3em;
+        margin-top: 0.5em;
+        float: right;
+      }
+
+    }
+  }
+
+}
