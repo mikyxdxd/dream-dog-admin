@@ -35,7 +35,8 @@
               userId:null,
               currmedia:null,
               mediasList:[],
-              showEdit:true,
+              fetching:true,
+              showEdit:false,
               deleting:false
 
             }
@@ -64,11 +65,13 @@
 
         fetchMedias(){
           var self = this;
+          this.fetching = true;
           switch(this.source){
             case 'scope':
               dataServices.getMediaViaAlbumId(this.albumId,this.pageNum,this.pageSize).then((res)=>{
 
                 self.mediasList = res.data.data;
+                this.fetching = false;
               })
               break;
 
@@ -76,6 +79,7 @@
               dataServices.getMediaViaDogId(this.dogId,this.pageNum,this.pageSize).then((res)=>{
 
                 self.mediasList = res.data.data;
+                this.fetching = false;
               })
               break;
 
@@ -83,6 +87,7 @@
           dataServices.getMediaViaUserId(this.userId,this.pageNum,this.pageSize).then((res)=>{
 
             self.mediasList = res.data.data;
+            this.fetching = false;
         })
           break;
 
@@ -94,7 +99,8 @@
       },
         components:{
 
-          detailimage:require('../../image/image.vue')
+          detailimage:require('../../image/image.vue'),
+          loadinganimation:require('../../loadinganimation/loadinganimation.vue')
 
         }
     }

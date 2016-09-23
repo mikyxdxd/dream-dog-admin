@@ -1,5 +1,5 @@
 <div id="albums">
-  <div id="albums_list">
+  <div id="albums_list" v-if="!fetching">
     <div id="albums_ctr">
 
       <button v-show="!showEdit" @click="showEdit = true" class="ui primary button">Edit</button>
@@ -20,4 +20,5 @@
       <!--</a>-->
     </a>
   </div>
+  <loadinganimation v-if="fetching"></loadinganimation>
 </div>

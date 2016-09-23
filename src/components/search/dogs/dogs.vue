@@ -21,6 +21,7 @@
               userId:null,
               showEdit:false,
               deleting:false,
+              fetching:true,
               dogsList:[]
             }
         },
@@ -39,9 +40,11 @@
 
         },
         fetchUserDogs(){
+          this.fetching = true;
           var self = this;
           dataServices.getDogsViaUserId(this.userId,this.pageNum,this.pageSize).then((res)=>{
             this.updateDogsList(res.data.data);
+            this.fetching = false;
           })
         },
         updateDogsList(dogsList){
@@ -51,6 +54,8 @@
         }
       },
         components:{
+
+          loadinganimation:require('../../loadinganimation/loadinganimation.vue')
 
         }
     }

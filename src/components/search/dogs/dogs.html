@@ -1,5 +1,5 @@
 <div id="dogs">
-  <div id="dogs_list">
+  <div id="dogs_list" v-if="!fetching">
     <div id="dogs_ctr">
 
       <button v-show="!showEdit" @click="showEdit = true" class="ui primary button">Edit</button>
@@ -12,12 +12,8 @@
         <div>Id: {{dog.id}}</div>
         <div>createdDate: {{dog.createdDate}}</div>
         <div id="dog_ctr" v-show="showEdit"><button :class="{'loading':deleting}" class="ui red tiny button" @click.stop.prevent="deleteDogViaId(dog,$index)">Delete</button></div>
-        <!--<div>gender: {{dog.gender}}</div>-->
       </div>
-      <!--<a class="ui image label">-->
-        <!--<img :src="dog.avatar">-->
-        <!--{{dog.name}}-->
-      <!--</a>-->
     </a>
   </div>
+  <loadinganimation v-if="fetching"></loadinganimation>
 </div>
