@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.13.1",
     "babel-runtime": "^6.0.0",
+    "jQuery": "^1.7.4",
     "semantic-ui": "^2.2.4",
     "vue": "^1.0.21",
     "vue-router": "^0.7.13"
