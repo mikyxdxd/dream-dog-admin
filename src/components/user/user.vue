@@ -13,10 +13,12 @@
 
           updateUser:function(){
 
-            console.log(this.userCpy.location);
+//            console.log(this.userCpy.location);
 
             dataServices.updateUserViaId(this.user.id,this.userCpy).then((res)=>{
-                console.log(res);
+              if(res.data.result == 'OK'){
+                toastr.success(`User ${this.user.id} has been updated.`)
+              }
             })
 
           },

@@ -240,10 +240,10 @@ class DataService{
   updateUserViaId(id,user){
 
     return axios({
-      method: 'PUT', url: `${API_SERVER}/api/user/me`,
+      method: 'PUT', url: `${API_SERVER}/api/admin/user/${user.id}`,
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE0NzQwNjMyOTgsInVzZXJfbmFtZSI6Im1hdHQuaC55LmxpLmhvbWVAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6ImQ3MmQzNGY4LTdiOGUtNDkxMC05MzM0LTY4NDljYWViMWFmMCIsImNsaWVudF9pZCI6ImRyZWFtZG9nLXdlYiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.2uaGwtr1WLKHR_Q_S44Qoec38b3-GYL2hiNoYkWR1VQ'
+        'Authorization': this.userToken
       },
       data:user
       })

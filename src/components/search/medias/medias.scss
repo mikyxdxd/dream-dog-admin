@@ -15,11 +15,13 @@
     .one_media{
       display: inline-block;
       cursor: pointer;
-      width:32%;
+      width: 32%;
       margin-left: 1%;
       height: 200px;
       overflow: hidden;
       position: relative;
+      vertical-align: bottom;
+      margin-top: 1%;
       img{
         width:100%;
       }

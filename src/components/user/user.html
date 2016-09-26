@@ -46,7 +46,7 @@
           </div>
           <div class="sec">Location:
 
-            <div id="locationEdit" v-show="showEdit">
+            <div id="locationEdit" v-if="showEdit">
               <div class="ui checkbox">
                 <input type="checkbox" name="example" @click="showLocation = !showLocation;">
                 <label>Show Location</label>

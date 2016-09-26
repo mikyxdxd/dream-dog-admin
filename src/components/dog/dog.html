@@ -39,7 +39,7 @@
           <div>Owner: <span>{{dog.owner.name}}</span></div>
           <div>Breeds:<input v-show="showEdit" v-model="newBreed"><i v-show="showEdit" class="icon plus" @click="addNewBreed(dogCpy)"></i>
             <div id="breeds_list">
-              <div class="ui label" v-for="breed in dogCpy.breeds "><span>{{breed.name}}<i class="remove red icon" v-show="showEdit" @click="removeBreed($index)"></i></span></div>
+              <div class="ui label" v-for="breed in dogCpy.breeds "><a v-link="{path:`/breed/${breed.id}`}">{{breed.name}}<i class="remove red icon" v-show="showEdit" @click="removeBreed($index)"></i></a></div>
             </div>
           </div>
           <div>Description:
