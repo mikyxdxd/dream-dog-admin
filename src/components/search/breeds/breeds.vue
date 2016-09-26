@@ -11,7 +11,8 @@
             return{
               pageNum:0,
               pageSize:300,
-              breedsList:[]
+              breedsList:[],
+              fetching:true
             }
         },
       methods:{
@@ -20,7 +21,9 @@
 
         },
         fetchAllBreeds(){
+          this.fetching = true;
           dataServices.getAllBreeds(this.pageNum,this.pageSize).then((res)=>{
+            this.fetching = false;
             this.updateBreedssList(res.data.data)
           })
         },
@@ -42,6 +45,8 @@
         }
       },
         components:{
+
+          loadinganimation:require('../../loadinganimation/loadinganimation.vue')
 
         }
     }

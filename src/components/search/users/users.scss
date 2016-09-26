@@ -1,7 +1,44 @@
 #users{
+  .one_user{
+
+    vertical-align: bottom;
+
+    .ava{
+
+      height: 40px;
+      width: 40px;
+      background-size: cover !important;
+      background-position: 50% !important;
+      position: absolute;
+      border-radius: 50%;
+
+    }
+    .info{
+      padding-left: 50px;
+      min-height: 40px;
+      .name{
+
+        font-weight: 700;
+
+      }
+    }
+  }
+
   .user{
     display: inline-block;
     width: 24%;
+    margin-left: 0.5%;
     margin-top: 2em;
+    padding: 0.7em 0.5em;
+    background: #fafafa;
+    vertical-align: bottom;
+    transition: 0.5s all;
+    cursor: pointer;
+    border-bottom: 1px solid #ffeaed;
+    color:inherit;
+    &:hover{
+      transition:0.5s all;
+      box-shadow: 3px 3px 9px -3px #d6cfd0;
+    }
   }
 }

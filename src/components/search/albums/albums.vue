@@ -19,15 +19,17 @@
               pageSize:50,
               userId:null,
               albumsList:[],
-              showEdit:false
+              showEdit:false,
+              fetching:true
             }
         },
       methods:{
         fetchUserAlbums(){
+          this.fetching = true;
           var self = this;
           dataServices.getAlbumsViaUserId(this.userId,this.pageNum,this.pageSize).then((res)=>{
-            console.log(res.data)
             this.updateAlbumsList(res.data.data);
+            this.fetching = false;
           })
         },
         updateAlbumsList(albumsList){
@@ -38,6 +40,7 @@
       },
         components:{
 
+          loadinganimation:require('../../loadinganimation/loadinganimation.vue')
         }
     }
 </script>

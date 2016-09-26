@@ -1,5 +1,5 @@
 <div id="medias">
-  <div id="media_list">
+  <div id="media_list" v-if="!fetching">
     <div id="medias_ctr">
 
       <button v-show="!showEdit" @click="showEdit = true" class="ui primary button">Edit</button>
@@ -17,6 +17,7 @@
       <!--</div>-->
     </div>
   </div>
+  <loadinganimation v-if="fetching"></loadinganimation>
 
   <detailimage :currmedia.sync="currmedia" v-if="currmedia"></detailimage>
 

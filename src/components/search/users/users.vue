@@ -16,7 +16,8 @@
             return{
               pageNum:0,
               pageSize:50,
-              usersList:[]
+              usersList:[],
+              fetching:true
             }
         },
       methods:{
@@ -24,13 +25,17 @@
 
         },
         fetchAllUsers(){
+          this.fetching = true;
           if(this.userNickname){
             dataServices.getUsersViaNickname(this.pageNum, this.pageSize, this.userNickname).then((res) => {
-              this.updateUsersList(res.data.data)
+              this.updateUsersList(res.data.data);
+            this.updateUsersList(res.data.data);
+            this.fetching = false;
             })
           }else {
             dataServices.getAllUsers(this.pageNum, this.pageSize).then((res) => {
-              this.updateUsersList(res.data.data)
+              this.updateUsersList(res.data.data);
+              this.fetching = false;
             })
           }
         },
@@ -48,7 +53,7 @@
         },
       },
         components:{
-
+          loadinganimation:require('../../loadinganimation/loadinganimation.vue')
         }
     }
 </script>
