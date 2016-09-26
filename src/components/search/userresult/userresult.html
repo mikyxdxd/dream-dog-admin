@@ -1,0 +1,12 @@
+<div id="user-result" :class="{'user-active':showsetting}">
+  <div id="close_btn"><i class="remove icon" @click="showsetting=false"></i></div>
+  <div>
+    <div class="item user" v-for="user in users">
+      <img class="ui avatar image" :src="user.avatar">
+      <a class="content" v-link="{path:`/user/${user.id}`}" @click="showsetting=false">
+        <div class="header">{{user.name}}</div>
+        <div>Id: {{user.id}}</div>
+        <div>Signature: {{user.signature}}</div>
+      </a>
+    </div>
+  </div>

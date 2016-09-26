@@ -1,0 +1,12 @@
+<div id="dog-result" :class="{'dog-active':showsetting}" v-if="showsetting">
+  <div id="close_btn"><i class="remove icon" @click="showsetting=false"></i></div>
+  <div>
+    <div class="item dog">
+      <img class="ui avatar image" :src="dog.avatar">
+      <a class="content" v-link="{path:`/dog/${dog.id}`}" @click="showsetting=false">
+        <div class="header">{{dog.name}}</div>
+        <div>Id: {{dog.id}}</div>
+        <div>Description: {{dog.description}}</div>
+      </a>
+    </div>
+  </div>

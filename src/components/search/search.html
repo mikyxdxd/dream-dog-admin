@@ -2,30 +2,34 @@
 
   <div class="ui search">
     <div class="ui icon input">
-      <input class="prompt" type="text" placeholder="Search ...">
-      <i class="search icon"></i>
+      <form v-on:submit.prevent="search()">
+        <input class="prompt" type="text" placeholder="Search ..." v-model="searchString">
+        <i class="search icon"></i>
+      </form>
     </div>
     <div class="results"></div>
   </div>
 
   <div class="search_options">
 
-    <select class="ui dropdown">
-      <option value="1">Users</option>
-      <option value="0">Albums</option>
-      <option value="0">Dogs</option>
+    <select class="ui dropdown" v-model="selected1">
+      <option value="0" selected>Users</option>
+      <option value="1">Albums</option>
+      <option value="2">Dogs</option>
     </select>
 
   </div>
 
   <div class="search_options">
 
-    <select class="ui dropdown">
-      <option value="1">Name</option>
-      <option value="0">Id</option>
+    <select class="ui dropdown" v-model="selected2">
+      <option value="0" selected>Name</option>
+      <option value="1">Id</option>
       <!--<option value="0">Dogs</option>-->
     </select>
 
   </div>
-
+  <userresult :users="users" :showsetting.sync="userShowSetting"></userresult>
+  <dogresult :dog="dog" :showsetting.sync="dogShowSetting"></dogresult>
+  <albumresult :album="album" :showsetting.sync="albumShowSetting"></albumresult>
 </div>
