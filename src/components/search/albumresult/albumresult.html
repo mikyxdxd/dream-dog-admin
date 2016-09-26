@@ -1,0 +1,12 @@
+<div id="album-result" :class="{'album-active':showsetting}" v-if="showsetting">
+  <div id="close_btn"><i class="remove icon" @click="showsetting=false"></i></div>
+  <div>
+    <div class="item album">
+      <!--<img class="ui avatar image" :src="dog.avatar">-->
+      <a class="content" v-link="{path:`/album/${album.id}`}" @click="showsetting=false">
+        <div class="header">{{album.caption}}</div>
+        <div>Id: {{album.id}}</div>
+        <div>Created Date: {{album.createdDate}}</div>
+      </a>
+    </div>
+  </div>

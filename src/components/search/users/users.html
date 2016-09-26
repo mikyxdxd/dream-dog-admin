@@ -1,5 +1,16 @@
 <div id="users">
   <div id="users_con" class="ui container">
+<<<<<<< HEAD
+  <div class="ui middle aligned animated list">
+      <div class="item user" v-for="user in usersList">
+      <img class="ui avatar image" :src="user.avatar">
+      <a class="content" v-link="{path:`/user/${user.id}`}">
+        <div class="header">{{user.name}}</div>
+        <div>Id: {{user.id}}</div>
+        <div>Signature: {{user.signature}}</div>
+      </a>
+      </div>
+=======
   <div class="ui middle aligned list" v-if="!fetching">
       <a class="item user" v-for="user in usersList" v-link="{path:`/user/${user.id}`}">
         <div class="one_user">
@@ -19,6 +30,7 @@
         <!--<div>Signature: {{user.signature}}</div>-->
       <!--</a>-->
     </a>
+>>>>>>> master
     <!--<div class="item">-->
       <!--<img class="ui avatar image" src="/images/avatar/small/christian.jpg">-->
       <!--<div class="content">-->

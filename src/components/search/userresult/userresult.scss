@@ -1,0 +1,18 @@
+#user-result{
+  position: fixed;
+  top: -100vh;
+  z-index: 100;
+  opacity: 0.85;
+  background: #1B1C1D;
+  color: white;
+  font-size: 1.5em;
+  transition:0.5s;
+  .user{
+    display: inline-block;
+  }
+}
+
+.user-active{
+  top: 40px !important;
+}
+
