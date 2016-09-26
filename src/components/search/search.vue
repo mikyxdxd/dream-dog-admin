@@ -41,9 +41,8 @@
           //search Dogs
           }else{
             if(this.selected2 == '0'){
-
+              this.searchDogViaName();
             }else{
-              console.log('aaa');
               this.searchDogViaID();
             }
           }
@@ -73,7 +72,7 @@
             }
           })
           .catch((error)=>{
-            toastr.error("Error");
+            toastr.error("Internal Server Error");
             console.log(error);
           });
         },
@@ -114,7 +113,7 @@
             }
           })
           .catch((error)=>{
-            toastr.error("Error");
+            toastr.error("Internal Server Error");
             console.log("Error");
           });
         },
@@ -135,7 +134,7 @@
             }
           })
           .catch((error)=>{
-            toastr("Error");
+            toastr.error("Internal Server Error");
             console.log("Error");
           });
         },
