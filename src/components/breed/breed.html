@@ -7,6 +7,7 @@
       </div>
   </div>
   <div id="breed_bottom" class="container" v-if="breed">
+    <medias source="breed"></medias>
     <div id="ctr"><button class="ui green button" :class="{'loading':updating}" @click="updateBreed()">Save</button></div>
     <div class="ui card info_section">
           <div class="content">

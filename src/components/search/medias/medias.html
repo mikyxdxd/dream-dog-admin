@@ -2,7 +2,7 @@
   <div id="media_list" v-if="!fetching">
     <div id="medias_ctr">
 
-      <button v-show="!showEdit" @click="showEdit = true" class="ui primary button">Edit</button>
+      <button v-show="!showEdit && mediasList.length > 0" @click="showEdit = true" class="ui primary button">Edit</button>
       <button v-show="showEdit" @click="showEdit = false" class="ui button">Cancel</button>
 
     </div>

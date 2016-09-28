@@ -9,6 +9,12 @@
             this.userCpy = JSON.parse(JSON.stringify(this.user));
           })
         },
+
+      route:{
+
+          canReuse:false
+
+      },
         methods:{
 
           updateUser:function(){
@@ -17,6 +23,9 @@
 
             dataServices.updateUserViaId(this.user.id,this.userCpy).then((res)=>{
               if(res.data.result == 'OK'){
+
+                this.user = this.userCpy;
+                this.showEdit = false;
                 toastr.success(`User ${this.user.id} has been updated.`)
               }
             })

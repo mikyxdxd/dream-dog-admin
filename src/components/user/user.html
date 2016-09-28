@@ -1,5 +1,4 @@
 <div id="user">
-
   <div class="content" v-if="user">
     <div id="content_top">
       <div id="user_info">
@@ -28,10 +27,14 @@
           </div>
           <div class="sec">Avatar:</div>
           <div class="sec">Id: {{user.id}}</div>
-          <div class="sec">Username: {{user.name}}</div>
+          <div class="sec">Username: {{user.username}}</div>
           <div class="sec">Name:
             <span  v-show="!showEdit">{{user.name}}</span>
             <input v-show="showEdit" v-model="userCpy.name"></input>
+          </div>
+          <div class="sec">Avatar:
+            <span  v-show="!showEdit">{{user.avatar}}</span>
+            <input v-show="showEdit" v-model="userCpy.avatar"></input>
           </div>
           <div class="sec">Email:
             <span  v-show="!showEdit">{{user.email}}</span>

@@ -68,7 +68,7 @@ class DataService{
   deleteDogViaId(id){
 
     return axios({
-      method: 'DELETE', url: `${API_SERVER}/api/dog/${id}`,
+      method: 'DELETE', url: `${API_SERVER}/api/dogs/${id}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -86,7 +86,7 @@ class DataService{
 
   getAllBreeds(pageNum,pageSize){
     return axios({
-      method: 'GET', url: `${API_SERVER}/api/breed?allbreeds=true&size=${pageSize}&page=${pageNum}`,
+      method: 'GET', url: `${API_SERVER}/api/breeds?allbreeds=true&size=${pageSize}&page=${pageNum}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -107,7 +107,7 @@ class DataService{
   updateBreedViaId(breed){
 
     return axios({
-      method: 'PUT', url: `${API_SERVER}/api/breed/${breed.id}`,
+      method: 'PUT', url: `${API_SERVER}/api/breeds/${breed.id}`,
       headers: {
 
         'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ class DataService{
 
   getBreedViaId(id){
     return axios({
-      method: 'GET', url: `${API_SERVER}/api/breed/${id}`,
+      method: 'GET', url: `${API_SERVER}/api/breeds/${id}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -128,7 +128,7 @@ class DataService{
 
   getDogViaId(id){
     return axios({
-      method: 'GET', url: `${API_SERVER}/api/dog/${id}`,
+      method: 'GET', url: `${API_SERVER}/api/dogs/${id}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -137,7 +137,7 @@ class DataService{
 
   updateDogViaId(id,dog){
     return axios({
-      method: 'PUT', url: `${API_SERVER}/api/dog/${id}`,
+      method: 'PUT', url: `${API_SERVER}/api/dogs/${id}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -157,6 +157,18 @@ class DataService{
 
   }
 
+  getMediaViaBreedId(breedId,pageNum,pageSize){
+
+    return axios({
+      method: 'GET', url: `${API_SERVER}/api/breeds/${breedId}/media?page=${pageNum}&size=${pageSize}`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': this.userToken
+      }})
+
+  }
+
+
   getMediaViaAlbumId(albumId,pageNum,pageSize){
 
     return axios({
@@ -172,7 +184,7 @@ class DataService{
   getMediaViaUserId(userId,pageNum,pageSize){
 
     return axios({
-      method: 'GET', url: `${API_SERVER}/api/users/${userId}/media?page=${pageNum}&size=${pageSize}`,
+      method: 'GET', url: `${API_SERVER}/api/media?page=${pageNum}&size=${pageSize}&userid=${userId}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -184,7 +196,7 @@ class DataService{
   getMediaViaDogId(dogId,pageNum,pageSize){
 
     return axios({
-      method: 'GET', url: `${API_SERVER}/api/dog/${dogId}/media?page=${pageNum}&size=${pageSize}`,
+      method: 'GET', url: `${API_SERVER}/api/dogs/${dogId}/media?page=${pageNum}&size=${pageSize}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -195,7 +207,7 @@ class DataService{
 
   getDogsViaUserId(userId,pageNum,pageSize){
     return axios({
-      method: 'GET', url: `${API_SERVER}/api/dog/${userId}/dogs?page=${pageNum}&size=${pageSize}`,
+      method: 'GET', url: `${API_SERVER}/api/dogs?page=${pageNum}&size=${pageSize}&userid=${userId}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -217,6 +229,17 @@ class DataService{
 
   }
 
+  deleteAlbumViaId(id){
+
+    return axios({
+      method: 'DELETE', url: `${API_SERVER}/api/scopes/${id}`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': this.userToken
+      }})
+  }
+
+
   getAlbumViaId(id){
 
     return axios({
@@ -230,7 +253,7 @@ class DataService{
   getAlbumsViaUserId(userId,pageNum,pageSize){
 
     return axios({
-      method: 'GET', url: `${API_SERVER}/api/users/${userId}/scopes?page=${pageNum}&size=${pageSize}`,
+      method: 'GET', url: `${API_SERVER}/api/scopes?page=${pageNum}&size=${pageSize}&userid=${userId}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken

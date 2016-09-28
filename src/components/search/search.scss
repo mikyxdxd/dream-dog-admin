@@ -6,11 +6,23 @@
   top:0;
   height: 50px;
   background: white;
+  .ui.search .prompt~.search.icon{
+    position: absolute;
+    top:8px;
+    right:0;
+  }
+
 
   .search.ui{
 
     display: inline-block;
     width:70%;
+    form{
+      width:100%;
+      input{
+        width:100%;
+      }
+    }
   }
 
   .search_options{
@@ -18,6 +30,7 @@
     display: inline-block;
     width: 10%;
     max-width: 100px;
+    padding-top: 5px;
     .ui.dropdown{
 
       min-width: inherit;
@@ -44,6 +57,13 @@
 
       border-radius: 0px;
       border: none;
+      width:100%;
+      position: relative;
+      i{
+        position: absolute;
+        top:7px;
+        right:0;
+      }
     }
 
   }
