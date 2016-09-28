@@ -8,7 +8,25 @@
 
             }
         },
+        methods:{
+          hideResult(){
+            $('#user-result').fadeOut();
+          }
+        },
         components:{
+
+        },
+        watch:{
+
+          'users':{
+            deep:true,
+            handler:function(v,ov){
+
+              if(v.length != 0){
+                $('#user-result').fadeIn();
+              }
+            }
+          }
 
         },
         props:['users', 'showsetting']

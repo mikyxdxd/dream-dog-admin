@@ -32,6 +32,15 @@
             this.fetching = false;
           })
         },
+        deleteAlbumViaId(album,$index){
+
+          dataServices.deleteAlbumViaId(album.id).then((res)=>{
+            console.log(res)
+//            this.deleting = false;
+            this.albumsList.splice($index,1);
+          })
+
+        },
         updateAlbumsList(albumsList){
           if(!this.albumsList.length){
             this.albumsList = albumsList;

@@ -14,9 +14,14 @@
             this.userId = this.$route.params.userId;
             break;
 
+          case 'breed':
+            this.breedId = this.$route.params.breedId;
+            break
+
           case 'scope':
             this.albumId = this.$route.params.albumId;
             break;
+
           case 'dog':
             this.dogId = this.$route.params.dogId;
             break;
@@ -29,8 +34,9 @@
             return{
 
               pageNum:0,
-              pageSize:100,
+              pageSize:200,
               dogId:null,
+              breedId:null,
               albumId:null,
               userId:null,
               currmedia:null,
@@ -74,6 +80,14 @@
                 this.fetching = false;
               })
               break;
+
+        case 'breed':
+          dataServices.getMediaViaBreedId(this.breedId,this.pageNum,this.pageSize).then((res)=>{
+
+            self.mediasList = res.data.data;
+          this.fetching = false;
+        })
+          break;
 
             case 'dog':
               dataServices.getMediaViaDogId(this.dogId,this.pageNum,this.pageSize).then((res)=>{

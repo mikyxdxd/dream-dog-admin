@@ -20,11 +20,11 @@
 
         </div>
         <div class="info"><span class="t">description</span>
-          <div class="con"><div ><input v-model="currmedia.bannerImage"></div></div>
+          <div class="con"><div ><input v-model="currmedia.description"></div></div>
         </div>
-        <div class="info"><span class="t">retina</span>
-          <div class="con"><div><input v-model="currmedia.retina.url"></div></div>
-        </div>
+        <!--<div class="info"><span class="t">retina</span>-->
+          <!--<div class="con"><div><input v-model="currmedia.retina.url"></div></div>-->
+        <!--</div>-->
         <div class="info"><span class="t">dog</span>
           <span>{{currmedia.dog.name + ' ' + currmedia.dog.id}}</span>
         </div>
@@ -36,7 +36,7 @@
         </div>
 
         <div id="image_ctrs">
-          <button class="ui primary button" @click="updateMedia()">Update</button>
+          <button class="ui pri mary button" @click="updateMedia()">Update</button>
         </div>
       </div>
 

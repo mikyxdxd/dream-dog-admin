@@ -7,7 +7,11 @@
         <i class="search icon"></i>
       </form>
     </div>
-    <div class="results"></div>
+    <!--<div class="results">-->
+
+      <userresult :users="users" :showsetting.sync="userShowSetting"></userresult>
+
+    <!--</div>-->
   </div>
 
   <div class="search_options">
@@ -29,7 +33,7 @@
     </select>
 
   </div>
-  <userresult :users="users" :showsetting.sync="userShowSetting"></userresult>
-  <dogresult :dog="dog" :showsetting.sync="dogShowSetting"></dogresult>
-  <albumresult :album="album" :showsetting.sync="albumShowSetting"></albumresult>
+  <!--<userresult :users="users" :showsetting.sync="userShowSetting"></userresult>-->
+  <!--<dogresult :dog="dog" :showsetting.sync="dogShowSetting"></dogresult>-->
+  <!--<albumresult :album="album" :showsetting.sync="albumShowSetting"></albumresult>-->
 </div>
