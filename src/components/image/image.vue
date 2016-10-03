@@ -6,20 +6,30 @@
         data(){
             return{
 
-              updating:false
+              updating:false,
+              detailImage:null,
 
             }
         },
+      ready(){
+        this.getMediaViaMediaId();
+      },
       methods:{
 
         updateMedia:function(){
 
           dataServices.updateMediaViaId(this.currmedia).then((res)=>{
-
             console.log(res);
           })
 
 
+        },
+
+        getMediaViaMediaId(){
+          dataServices.getMediaViaMediaId(this.currmedia).then((res)=>{
+            console.log(res)
+            this.detailImage = res.data;
+          })
         }
       },
       props:['currmedia'],

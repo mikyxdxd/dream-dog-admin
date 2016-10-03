@@ -2,37 +2,37 @@
 
   <div id=bg>
 
-    <div id="content">
+    <div id="content" v-if="detailImage">
 
       <div id="content_image">
 
-        <img :src="currmedia.retina.url">
+        <img :src="detailImage.retina.url">
 
       </div>
 
       <div id="content_info">
 
-        <div id="close"><i class="icon remove" @click="currmedia = null"></i></div>
+        <div id="close"><i class="icon remove" @click="detailImage = null"></i></div>
 
         <div class="info"><span class="t">Caption</span>
 
-          <div class="con"><div><input v-model="currmedia.caption"></div></div>
+          <div class="con"><div><input v-model="detailImage.caption"></div></div>
 
         </div>
         <div class="info"><span class="t">description</span>
-          <div class="con"><div ><input v-model="currmedia.description"></div></div>
+          <div class="con"><div ><input v-model="detailImage.description"></div></div>
         </div>
         <!--<div class="info"><span class="t">retina</span>-->
           <!--<div class="con"><div><input v-model="currmedia.retina.url"></div></div>-->
         <!--</div>-->
-        <div class="info"><span class="t">dog</span>
-          <span>{{currmedia.dog.name + ' ' + currmedia.dog.id}}</span>
+        <div class="info" v-if="detailImage.dog "><span class="t">dog</span>
+          <span>{{detailImage.dog.name + ' ' + detailImage.dog.id}}</span>
         </div>
         <div class="info"><span class="t">createdDate</span>
-          <span>{{currmedia.createdDate}}</span>
+          <span>{{detailImage.createdDate}}</span>
         </div>
         <div class="info"><span class="t">shotTime</span>
-          <span>{{currmedia.shotTime}}</span>
+          <span>{{detailImage.shotTime}}</span>
         </div>
 
         <div id="image_ctrs">

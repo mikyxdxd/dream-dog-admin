@@ -157,6 +157,17 @@ class DataService{
 
   }
 
+  getMediaViaMediaId(media){
+
+    return axios({
+      method: 'GET', url: `${API_SERVER}/api/media/${media.id}`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': this.userToken
+      }})
+
+  }
+
   getMediaViaBreedId(breedId,pageNum,pageSize){
 
     return axios({
