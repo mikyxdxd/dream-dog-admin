@@ -172,7 +172,7 @@ class DataService{
   getMediaViaAlbumId(albumId,pageNum,pageSize){
 
     return axios({
-    method: 'GET', url: `${API_SERVER}/api/scope/${albumId}/media?page=${pageNum}&size=${pageSize}`,
+    method: 'GET', url: `${API_SERVER}/api/scopes/${albumId}/media?page=${pageNum}&size=${pageSize}`,
       headers: {
       'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -218,7 +218,7 @@ class DataService{
 
     return axios({
 
-      method: 'PUT', url: `${API_SERVER}/api/scope/${id}`,
+      method: 'PUT', url: `${API_SERVER}/api/scopes/${id}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
@@ -243,7 +243,7 @@ class DataService{
   getAlbumViaId(id){
 
     return axios({
-      method: 'GET', url: `${API_SERVER}/api/scope/${id}`,
+      method: 'GET', url: `${API_SERVER}/api/scopes/${id}`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken
