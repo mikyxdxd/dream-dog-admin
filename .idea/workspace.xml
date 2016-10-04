@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37a306ff-4b44-45d9-9636-87edaa18f6f6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/npm-debug.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/features/features.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/features/features.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/features/features.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/search/search.html" afterPath="$PROJECT_DIR$/src/components/search/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/album/album.scss" afterPath="$PROJECT_DIR$/src/components/album/album.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/album/album.vue" afterPath="$PROJECT_DIR$/src/components/album/album.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/dog/dog.scss" afterPath="$PROJECT_DIR$/src/components/dog/dog.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/image/image.html" afterPath="$PROJECT_DIR$/src/components/image/image.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/image/image.vue" afterPath="$PROJECT_DIR$/src/components/image/image.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/search/search.vue" afterPath="$PROJECT_DIR$/src/components/search/search.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/sidebar/sidebar.html" afterPath="$PROJECT_DIR$/src/components/sidebar/sidebar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/user/user.scss" afterPath="$PROJECT_DIR$/src/components/user/user.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataservices/dataservices.js" afterPath="$PROJECT_DIR$/src/dataservices/dataservices.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/route.js" afterPath="$PROJECT_DIR$/src/route.js" />
     </list>
     <ignored path="dream-dog-admin.iws" />
@@ -29,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="search.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/search/search.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
+            <state relative-caret-position="180">
+              <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -63,17 +73,17 @@
         <entry file="file://$PROJECT_DIR$/src/route.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+              <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="255">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -95,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/src/dataservices/dataservices.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1470">
-              <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+              <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -127,7 +137,6 @@
         <option value="$PROJECT_DIR$/src/components/search/albumresult/albumresult.scss" />
         <option value="$PROJECT_DIR$/src/components/search/albumresult/albumresult.html" />
         <option value="$PROJECT_DIR$/src/components/search/userresult/userresult.scss" />
-        <option value="$PROJECT_DIR$/src/components/search/search.vue" />
         <option value="$PROJECT_DIR$/src/components/login/login.html" />
         <option value="$PROJECT_DIR$/src/components/search/breeds/breeds.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -136,6 +145,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/components/search/search.html" />
         <option value="$PROJECT_DIR$/dist/server.js" />
+        <option value="$PROJECT_DIR$/src/components/search/search.vue" />
       </list>
     </option>
   </component>
@@ -296,7 +306,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="serv&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/dist/server.js&#10;route&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/route.js&#10;index&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/index.html&#10;packa&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/package.json&#10;data&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/dataservices/dataservices.js&#10;breeds&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/search/breeds/breeds.vue&#10;breeds.vue&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/search/breeds/breeds.vue&#10;user&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/search/users/users.html&#10;searcj&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/semantic/src/definitions/modules/search.js&#10;login&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/login/login.html&#10;search&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/search/search.vue&#10;pack&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/package.json&#10;getUsersViaNickname&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="search.vue&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/search/search.vue&#10;serv&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/dist/server.js&#10;route&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/route.js&#10;index&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/index.html&#10;packa&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/package.json&#10;data&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/dataservices/dataservices.js&#10;breeds&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/search/breeds/breeds.vue&#10;breeds.vue&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/search/breeds/breeds.vue&#10;user&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/search/users/users.html&#10;searcj&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/semantic/src/definitions/modules/search.js&#10;login&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/login/login.html&#10;search&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/src/components/search/search.vue&#10;pack&#9;FILE&#9;file:///Users/Alex/Dropbox/pantoScope/dogs/dream-dog-admin/dream-dog-admin/package.json&#10;getUsersViaNickname&#9;null&#9;null" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -372,12 +382,12 @@
       <workItem from="1474653647526" duration="26990000" />
       <workItem from="1475012011087" duration="8583000" />
       <workItem from="1475130063110" duration="3468000" />
-      <workItem from="1475534720177" duration="7743000" />
+      <workItem from="1475534720177" duration="9533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47289000" />
+    <option name="totallyTimeSpent" value="49079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1927" y="23" width="1280" height="777" extended-state="6" />
@@ -387,10 +397,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2729927" sideWeight="0.50277996" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329927" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2729927" sideWeight="0.49722" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2729927" sideWeight="0.49722" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -420,6 +430,24 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -709,7 +737,7 @@
     <entry file="file://$PROJECT_DIR$/src/route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -733,7 +761,7 @@
     <entry file="file://$PROJECT_DIR$/src/dataservices/dataservices.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
-          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+          <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -788,14 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/search/search.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/search/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -806,8 +826,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        <state relative-caret-position="255">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/search/search.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
           <folding />
         </state>
       </provider>

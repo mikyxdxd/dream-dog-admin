@@ -6,21 +6,43 @@
         data(){
             return{
 
-              updating:false
+              updating:false,
+              detailImage:null,
 
             }
         },
+      ready(){
+      },
       methods:{
 
-        updateMedia:function(){
+        updateMedia(){
 
           dataServices.updateMediaViaId(this.currmedia).then((res)=>{
 
-            console.log(res);
+            if(res.data.result == 'OK'){
+            toastr.success(`${this.currmedia.id} has been updated`);
+          }
+          })
+        },
+
+        featureImage(){
+
+          dataServices.featureImage(this.currmedia).then((res)=>{
+
+            if(res.data.result == 'OK'){
+
+
+              toastr.success(`${this.currmedia.id} has been featured`);
+            }
+
           })
 
-
-        }
+        },
+//        getMediaViaMediaId(){
+//          dataServices.getMediaViaMediaId(this.currmedia).then((res)=>{
+//            this.detailImage = res.data;
+//          })
+//        }
       },
       props:['currmedia'],
         components:{

@@ -22,7 +22,6 @@
               this.updating = false;
               if(res.data.result == 'OK'){
 
-                console.log(res.data.scope)
                 this.album = res.data.scope;
                 this.albumCpy = JSON.parse(JSON.stringify(this.album));
               }
