@@ -103,12 +103,7 @@
             }
           })
           .catch((error)=>{
-<<<<<<< HEAD
-            toastr.error("Internal Server Error");
-            console.log("Error");
-=======
             toastr.error("Error");
->>>>>>> 3e1c87f1fe14e3b2b9175912c6b1043fb37b0d57
           });
         },
         searchDogViaID(){
@@ -125,12 +120,7 @@
             }
           })
           .catch((error)=>{
-<<<<<<< HEAD
-            toastr.error("Internal Server Error");
-            console.log("Error");
-=======
             toastr("Error");
->>>>>>> 3e1c87f1fe14e3b2b9175912c6b1043fb37b0d57
           });
         },
         searchDogViaName(){
