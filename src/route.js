@@ -45,6 +45,10 @@ export default (App)=>{
     },200);
   })
 
+  router.redirect({
+    '/': '/breeds',
+  });
+
   router.map({
     'user/:userId':{
       component:require('./components/user/user.vue')
