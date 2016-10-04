@@ -12,25 +12,37 @@
             }
         },
       ready(){
-        this.getMediaViaMediaId();
       },
       methods:{
 
-        updateMedia:function(){
+        updateMedia(){
 
           dataServices.updateMediaViaId(this.currmedia).then((res)=>{
-            console.log(res);
+
+            if(res.data.result == 'OK'){
+            toastr.success(`${this.currmedia.id} has been updated`);
+          }
           })
-
-
         },
 
-        getMediaViaMediaId(){
-          dataServices.getMediaViaMediaId(this.currmedia).then((res)=>{
-            console.log(res)
-            this.detailImage = res.data;
+        featureImage(){
+
+          dataServices.featureImage(this.currmedia).then((res)=>{
+
+            if(res.data.result == 'OK'){
+
+
+              toastr.success(`${this.currmedia.id} has been featured`);
+            }
+
           })
-        }
+
+        },
+//        getMediaViaMediaId(){
+//          dataServices.getMediaViaMediaId(this.currmedia).then((res)=>{
+//            this.detailImage = res.data;
+//          })
+//        }
       },
       props:['currmedia'],
         components:{

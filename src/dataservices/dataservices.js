@@ -281,8 +281,6 @@ class DataService{
       },
       data:user
       })
-
-
   }
 
   getUserViaId(id){
@@ -335,8 +333,28 @@ class DataService{
   })
   }
 
+  featureImage(image){
 
+    return axios({
+      method: 'PUT', url: `${API_SERVER}/api/media/${image.id}/featured`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': this.userToken
+      },
+      data:image
+    })
+  }
 
+  getFeatureMedias(){
+
+    return axios({
+      method: 'GET', url: `${API_SERVER}/api/media/featured`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': this.userToken
+      }})
+
+  }
 }
 
 let dataServices = new DataService();

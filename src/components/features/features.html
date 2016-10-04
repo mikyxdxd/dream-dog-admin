@@ -1,0 +1,24 @@
+<div id="features">
+  <div id="media_list" v-if="!fetching">
+    <!--<div id="medias_ctr">-->
+
+      <!--<button v-show="!showEdit && mediasList.length > 0" @click="showEdit = true" class="ui primary button">Edit</button>-->
+      <!--<button v-show="showEdit" @click="showEdit = false" class="ui button">Cancel</button>-->
+
+    <!--</div>-->
+    <div class="one_media" v-for="media in mediasList">
+      <div id="media_ctr" v-show="showEdit"><button :class="{'loading':deleting}" class="ui red tiny button" @click.stop.prevent="deleteMediaViaId(media,$index)">Delete</button></div>
+      <img :src="media.retina.url" @click="currmedia = media">
+        <div id="media_ctr">
+          <button @click="Unfeature(media)" class="ui primary button">Unfeature</button>
+        <!--<button v-show="!showEdit" @click="showEdit = true" class="ui primary button">Edit</button>-->
+        <!--<button v-show="showEdit" @click="showEdit = false" class="ui button">Cancel</button>-->
+        </div>
+    </div>
+
+    </div>
+
+  <loadinganimation v-if="fetching"></loadinganimation>
+  <detailimage :currmedia.sync="currmedia" v-if="currmedia"></detailimage>
+
+</div>

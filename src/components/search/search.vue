@@ -43,14 +43,12 @@
             if(this.selected2 == '0'){
 
             }else{
-              console.log('aaa');
               this.searchDogViaID();
             }
           }
         },
         searchUserViaID: function(){
           dataServices.getUserViaId(this.searchString).then((res)=>{
-            console.log(res.data);
             if(res.status == 200){
               if(res.data){
                 var user = {
@@ -65,32 +63,26 @@
                 this.userShowSetting = true;
               }else{
                 toastr.error("Your search doesn't have any result");
-                console.log('no result');
               }
             }else{
               toastr.error("Error");
-              console.log("Error");
             }
           })
           .catch((error)=>{
             toastr.error("Error");
-            console.log(error);
           });
         },
         searchUserViaName: function(){
           dataServices.getUsersViaNickname(0, 10, this.searchString).then((res)=>{
             if(res.status == 200){
               if(res.data.data.length > 0){
-                console.log(res.data.data);
                 this.users = res.data.data;
                 this.userShowSetting = true;
               }else{
                 toastr.error("Your search doesn't have any result");
-                console.log('no result');
               }
             }else{
               toastr.error("Error");
-              console.log("Error");
             }
           });
         },
@@ -101,42 +93,34 @@
           dataServices.getAlbumViaId(this.searchString).then((res)=>{
             if(res.status == 200){
               if(res.data){
-                console.log(res.data);
                 this.album = res.data;
                 this.albumShowSetting = true;
               }else{
                 toastr.error("Your search doesn't have any result");
-                console.log('no result');
               }
             }else{
               toastr.error("Error");
-              console.log("Error");
             }
           })
           .catch((error)=>{
             toastr.error("Error");
-            console.log("Error");
           });
         },
         searchDogViaID(){
           dataServices.getDogViaId(this.searchString).then((res)=>{
             if(res.status == 200){
              if(res.data){
-               console.log(res.data);
                this.dog = res.data;
                this.dogShowSetting = true;
              }else{
                toastr.error("Your search doesn't have any result");
-               console.log('no result');
              }
             }else{
               toastr.error("Error");
-              console.log("Error");
             }
           })
           .catch((error)=>{
             toastr("Error");
-            console.log("Error");
           });
         },
         searchDogViaName(){

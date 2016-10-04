@@ -66,6 +66,9 @@ export default (App)=>{
     },
     'users':{
       component:require('./components/search/users/users.vue')
+    },
+    'features':{
+      component:require('./components/features/features.vue')
     }
   })
 
