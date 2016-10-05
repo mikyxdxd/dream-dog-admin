@@ -41,7 +41,7 @@
           //search Dogs
           }else{
             if(this.selected2 == '0'){
-
+              this.searchDogViaName();
             }else{
               this.searchDogViaID();
             }
