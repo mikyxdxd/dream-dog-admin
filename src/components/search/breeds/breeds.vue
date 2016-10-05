@@ -28,8 +28,15 @@
           })
         },
         updateBreedssList(breedsList){
+          this.breedsList = breedsList;
+          this.breedsList.sort((a,b)=>{
+            var keyA = a.id,
+                keyB = b.id;
 
-          this.breedsList = breedsList
+            if(keyA < keyB) return -1;
+            if(keyA > keyB) return 1;
+            return 0;
+          });
         },
         updateBreed(breed,index){
 

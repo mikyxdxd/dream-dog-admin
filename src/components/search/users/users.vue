@@ -41,7 +41,15 @@
         },
         updateUsersList(usesrList){
 
-          this.usersList = usesrList
+          this.usersList = usesrList;
+          this.usersList.sort((a,b)=>{
+            var keyA = a.id,
+            keyB = b.id;
+
+          if(keyA < keyB) return -1;
+          if(keyA > keyB) return 1;
+          return 0;
+        });
         },
         updateBreed(breed,index){
           this.breedsList.$set(index, Object.assign({}, breed, {$$updating:true}));

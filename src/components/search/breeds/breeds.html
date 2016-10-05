@@ -1,45 +1,89 @@
 <div id="breeds">
-  <div id="breeds_con" class="ui container" v-if="!fetching">
-  <table class="ui fixed single line celled inverted striped table">
-    <div class="breed" v-for="breed in breedsList">
-    <div class="caption"><b>{{breed.type}}</b></div>
+  <div id="breeds_con" class="ui" v-if="!fetching">
+  <table class="ui fixed single line celled  striped table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Type</th>
+        <th>Name</th>
+        <th>LifeSpan</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>CostOfLiving</th>
+        <th>Ctrl</th>
+      </tr>
+    </thead>
 
-      <div class="sec" style="height: 290px">
-        <div class="cap">bannerImage</div>
-        <img :src="breed.bannerImage">
-        <div class="con"><div class="ui mini input"><input v-model="breed.bannerImage"></div></div>
-      </div>
+    <tbody>
+      <tr v-for="breed in breedsList">
+        <td>
+          <div>
+            <div class="content">
+              {{breed.id}}
+            </div>
+            <h4 class="ui image header">
+              <img :src="breed.bannerImage" class="ui mini rounded image">
+            </h4>
+          </div>
+        </td>
+        <td>{{breed.type}}</td>
+        <td><div class="ui mini input"><input v-model="breed.name"></div></td>
+        <td><div class="ui mini input"><input v-model="breed.lifeSpan"></div></td>
+        <td><div class="ui mini input"><input v-model="breed.weight"></div></td>
+        <td><div class="ui mini input"><input v-model="breed.height"></div></td>
+        <td><div class="ui mini input"><input v-model="breed.costOfLiving"></div></td>
+        <td>
+          <div class="ctr">
+            <a class="ui small button" v-link="{'path':`/breed/${breed.id}`}">Detail</a>
+            <button class="ui small primary button" :class="{'loading':breed.$$updating}" @click="updateBreed(breed,$index)">
+              Save
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
 
-      <div class="sec">
-        <div class="cap">Name</div>
-        <div class="con"><div class="ui mini input"><input v-model="breed.name"></div></div>
-      </div>
 
-      <div class="sec">
-        <div class="cap">Id:<span style="font-weight: 100;margin-left: 5px">{{breed.id}}</span> </div>
-      </div>
-      <div class="sec">
-        <div class="cap">lifeSpan: </div>
-        <div class="con"><div class="ui mini input"><input v-model="breed.lifeSpan"></div></div>
-      </div>
-      <div class="sec">
-        <div class="cap">weight: </div>
-        <div class="con"><div class="ui mini input"><input v-model="breed.weight"></div></div>
-      </div>
-      <div class="sec">
-        <div class="cap">height: </div>
-        <div class="con"><div class="ui mini input"><input v-model="breed.height"></div></div>
-      </div>
-      <div class="sec">
-        <div class="cap">costOfLiving: </div>
-        <div class="con"><div class="ui mini input"><input v-model="breed.costOfLiving"></div></div>
-      </div>
-      <div class="sec"><div class="ctr">
-        <a class="ui small button" v-link="{'path':`/breed/${breed.id}`}">Detail</a>
-        <button class="ui small primary button" :class="{'loading':breed.$$updating}" @click="updateBreed(breed,$index)">
-          Save
-        </button>
-      </div></div>
+    <!--<div class="breed" v-for="breed in breedsList">-->
+    <!--<div class="caption"><b>{{breed.type}}</b></div>-->
+
+      <!--<div class="sec" style="height: 290px">-->
+        <!--<div class="cap">bannerImage</div>-->
+        <!--<img :src="breed.bannerImage">-->
+        <!--<div class="con"><div class="ui mini input"><input v-model="breed.bannerImage"></div></div>-->
+      <!--</div>-->
+
+      <!--<div class="sec">-->
+        <!--<div class="cap">Name</div>-->
+        <!--<div class="con"><div class="ui mini input"><input v-model="breed.name"></div></div>-->
+      <!--</div>-->
+
+      <!--<div class="sec">-->
+        <!--<div class="cap">Id:<span style="font-weight: 100;margin-left: 5px">{{breed.id}}</span> </div>-->
+      <!--</div>-->
+      <!--<div class="sec">-->
+        <!--<div class="cap">lifeSpan: </div>-->
+        <!--<div class="con"><div class="ui mini input"><input v-model="breed.lifeSpan"></div></div>-->
+      <!--</div>-->
+      <!--<div class="sec">-->
+        <!--<div class="cap">weight: </div>-->
+        <!--<div class="con"><div class="ui mini input"><input v-model="breed.weight"></div></div>-->
+      <!--</div>-->
+      <!--<div class="sec">-->
+        <!--<div class="cap">height: </div>-->
+        <!--<div class="con"><div class="ui mini input"><input v-model="breed.height"></div></div>-->
+      <!--</div>-->
+      <!--<div class="sec">-->
+        <!--<div class="cap">costOfLiving: </div>-->
+        <!--<div class="con"><div class="ui mini input"><input v-model="breed.costOfLiving"></div></div>-->
+      <!--</div>-->
+      <!--<div class="sec"><div class="ctr">-->
+        <!--<a class="ui small button" v-link="{'path':`/breed/${breed.id}`}">Detail</a>-->
+        <!--<button class="ui small primary button" :class="{'loading':breed.$$updating}" @click="updateBreed(breed,$index)">-->
+          <!--Save-->
+        <!--</button>-->
+      <!--</div></div>-->
+  <!---->
   </table>
   </div>
   <loadinganimation v-if="fetching"></loadinganimation>

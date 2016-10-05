@@ -3,72 +3,91 @@
   #breeds_con{
 
     margin-top:20px;
-    .breed{
-      margin-top: 20px;
-      vertical-align: bottom;
-      display: inline-block;
-      width: 23%;
-      padding: 0em;
-      margin-left: 1.5%;
-      background: #fafafa;
-      .sec{
-        margin-top: 5px;
-        //border-right: px solid red;
-      }
-      img{
-        border: 0;
+    tbody{
+      .mini.rounded{
         width: 100%;
-        //margin-left: 10px;
-        //margin-top: 10px;
-        //border-radius: 5px;
       }
 
-      .caption{
-
-        padding: 0.7em 0.6em;
-        font-size: 1.3em;
-        border-bottom: 2px solid white;
+      input{
+        width: 100%;
+        border: none;
+        border-left: 2px solid pink;
+        border-radius: 0px;
       }
 
-      .cap{
-        text-transform: capitalize;
-        font-weight: bold;
-      }
-      .cap,.con{
-        //display: inline-block;
-        //margin-left: 5px;
-        padding: 5px;
-      }
-      .con{
-
-        padding: 5px 0px;
-        //padding: 0.5em;
-        .ui.slider.checkbox .box:after, .ui.slider.checkbox label:after{
-          width: 1rem;
-          height: 1rem;
-        }
-        .ui.fitted.slider.checkbox, .ui.fitted.toggle.checkbox{
-          top:9px;
-        }
-        .ui.slider.checkbox .box:before, .ui.slider.checkbox label:before{
-          top: .2rem;
-          width: 2.8rem;
-        }
-
-        .input{
-          width: 100%;
-          input{
-            border: none;
-            border-left: 2px solid pink;
-            border-radius: 0px;
-          }
-        }
-      }
-      .ctr{
-        text-align: right;
-        padding: 0.5em;
+      .ui.small.button{
+        display: block;
+        margin-top: 5px;
+        width: 100%;
       }
     }
+    //.breed{
+    //  margin-top: 20px;
+    //  vertical-align: bottom;
+    //  display: inline-block;
+    //  width: 23%;
+    //  padding: 0em;
+    //  margin-left: 1.5%;
+    //  background: #fafafa;
+    //  //.sec{
+    //  //  margin-top: 5px;
+    //  //  //border-right: px solid red;
+    //  //}
+    //  //img{
+    //  //
+    //  //  border: 0;
+    //  //  width: 100%;
+    //  //  //margin-left: 10px;
+    //  //  //margin-top: 10px;
+    //  //  //border-radius: 5px;
+    //  //}
+    //  //
+    //  //.caption{
+    //  //
+    //  //  padding: 0.7em 0.6em;
+    //  //  font-size: 1.3em;
+    //  //  border-bottom: 2px solid white;
+    //  //}
+    //  //
+    //  //.cap{
+    //  //  text-transform: capitalize;
+    //  //  font-weight: bold;
+    //  //}
+    //  //.cap,.con{
+    //  //  //display: inline-block;
+    //  //  //margin-left: 5px;
+    //  //  padding: 5px;
+    //  //}
+    //  //.con{
+    //  //
+    //  //  padding: 5px 0px;
+    //  //  //padding: 0.5em;
+    //  //  .ui.slider.checkbox .box:after, .ui.slider.checkbox label:after{
+    //  //    width: 1rem;
+    //  //    height: 1rem;
+    //  //  }
+    //  //  .ui.fitted.slider.checkbox, .ui.fitted.toggle.checkbox{
+    //  //    top:9px;
+    //  //  }
+    //  //  .ui.slider.checkbox .box:before, .ui.slider.checkbox label:before{
+    //  //    top: .2rem;
+    //  //    width: 2.8rem;
+    //  //  }
+    //  //
+    //  //  .input{
+    //  //    width: 100%;
+    //  //    input{
+    //  //      border: none;
+    //  //      border-left: 2px solid pink;
+    //  //      border-radius: 0px;
+    //  //    }
+    //  //  }
+    //  //}
+    //  //.ctr{
+    //  //  text-align: right;
+    //  //  padding: 0.5em;
+    //  //}
+    //}
 
   }
 
