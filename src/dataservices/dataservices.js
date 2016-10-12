@@ -2,7 +2,7 @@
 import axios from 'axios'
 const BASIC_AUTH = 'Basic ZHJlYW1kb2ctd2ViOmFSYmF6MjlkdmlCJWJkZDBwMTZ0';
 const AUTHOR_SERVER = 'http://174.36.245.123:9999';
-const API_SERVER = 'http://service.dreamdogapp.com:8080';
+const API_SERVER = 'http://45.33.84.127:8080';
 const ACCESS_LEVEL = {
   0:'VISITOR',
   1:'ADMIN',
@@ -307,7 +307,7 @@ class DataService{
   fetUserInfo (){
 
     return axios({
-      method: 'GET', url: `http://service.dreamdogapp.com:8080/api/me`,
+      method: 'GET', url: `${API_SERVER}/api/me`,
       headers: {
         'Content-Type': 'application/json',
         'Authorization': this.userToken

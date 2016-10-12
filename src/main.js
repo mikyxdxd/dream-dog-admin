@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router';
 import dataServices from './dataservices/dataservices';
-require('../node_modules/jquery/dist/jquery')
+// require('../node_modules/jquery/dist/jquery')
 require('../node_modules/semantic-ui/dist/semantic.min.css');
 require('../node_modules/semantic-ui/dist/semantic.min');
 Vue.use(VueRouter);
