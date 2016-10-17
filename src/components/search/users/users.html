@@ -1,19 +1,51 @@
 <div id="users">
   <div id="users_con" class="ui container">
-  <div class="ui middle aligned list" v-if="!fetching">
-      <a class="item user" v-for="user in usersList" v-link="{path:`/user/${user.id}`}">
-        <div class="one_user">
-          <div class="ava" :style="{'background':'url(' + user.avatar + ')'}">
-            <!--<img :src="user.avatar">-->
-          </div>
-          <div class="info">
-            <div class="name">{{user.name}}</div>
-            <div class="info_sec">id: {{user.id}}</div>
-            <div class="info_sec">signiture: {{user.signiture}}</div>
-          </div>
-        </div>
-    </a>
-  </div>
+    <table class="ui fixed single line celled striped table">
+      <thead>
+        <tr>
+          <th>UserName</th>
+          <th class="three wide">ID</th>
+          <th>Signature</th>
+          <th class="three wide">Ctrl</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr v-for="user in usersList">
+          <td>{{user.name}}</td>
+          <td>
+            <h4 class="ui image header">
+              <div class="content">
+                {{user.id}}
+              </div>
+              <img :src="user.avatar" class="ui mini rounded image">
+            </h4>
+          </td>
+          <td>{{user.signature}}</td>
+          <td>
+            <a class="ui medium button" v-link="{'path':`/user/${user.id}`}">Detail</a>
+            <!--<a class="ui medium button" @click="resetPassword(user.email)">ResetPassword</a>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <loadinganimation v-if="fetching"></loadinganimation>
   </div>
+  <!--<div id="users_con" class="ui container">-->
+  <!--<div class="ui middle aligned list" v-if="!fetching">-->
+      <!--<a class="item user" v-for="user in usersList" v-link="{path:`/user/${user.id}`}">-->
+        <!--<div class="one_user">-->
+          <!--<div class="ava" :style="{'background':'url(' + user.avatar + ')'}">-->
+            <!--&lt;!&ndash;<img :src="user.avatar">&ndash;&gt;-->
+          <!--</div>-->
+          <!--<div class="info">-->
+            <!--<div class="name">{{user.name}}</div>-->
+            <!--<div class="info_sec">id: {{user.id}}</div>-->
+            <!--<div class="info_sec">signiture: {{user.signiture}}</div>-->
+          <!--</div>-->
+        <!--</div>-->
+    <!--</a>-->
+  <!--</div>-->
+    <!---->
+  <!--</div>-->
 </div>

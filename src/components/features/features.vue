@@ -21,7 +21,16 @@
       methods: {
 
         Unfeature(media){
-
+          dataServices.defeatureImage(media).then((res)=>{
+            var self = this
+            if(res.data.result == "OK"){
+              toastr.success(`Successfully removed ${media.id} from feature image`);
+              self.mediasList = [];
+              self.fetchFeatureMedias();
+              self.$nextTick(()=>{
+              })
+            }
+          })
         },
 
         fetchFeatureMedias(){

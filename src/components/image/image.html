@@ -35,7 +35,23 @@
           <span>{{currmedia.shotTime}}</span>
         </div>
 
+        <div class="report_select">
+          Report Reason
+          <select class="ui search dropdown" v-model="selectOpt">
+            <option value="VIOLENCE">VIOLENCE</option>
+            <option value="NUDITY">NUDITY</option>
+            <option value="HATE">HATE</option>
+            <option value="DRUG">DRUG</option>
+            <option value="SPAM">SPAM</option>
+            <option value="COPYRIGHT">COPYRIGHT</option>
+            <option value="BROKENLINK">BROKENLINK</option>
+          </select>
+
+
+        </div>
+
         <div id="image_ctrs">
+          <button class="ui red button right" @click="reportImage()">Report</button>
           <button class="ui green button" @click="featureImage()">Feature Image</button>
           <button class="ui button" @click="updateMedia()">Update</button>
         </div>

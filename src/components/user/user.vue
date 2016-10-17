@@ -35,7 +35,15 @@
           showLocationSetting:function(){
 
             this.showLocation = true;
-          }
+          },
+
+          resetPassword(email){
+            dataServices.resetPassword(email).then((res)=>{
+              if(res.status == 200){
+                toastr.success('Reset email has been sent');
+              }
+            })
+          },
 
         },
         data(){

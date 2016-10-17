@@ -345,6 +345,30 @@ class DataService{
     })
   }
 
+  defeatureImage(image){
+    return axios({
+      method: 'DELETE', url: `${API_SERVER}/api/media/${image.id}/featured`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': this.userToken
+      }
+    })
+  }
+
+  reportImage(image, reason){
+    return axios({
+      method: 'POST', url: `${API_SERVER}/api/media/${image.id}/reports`,
+      headers:{
+        'Content-Type': 'application/json',
+        'Authorization': this.userToken
+      },
+      data:
+      {
+        'reason': reason
+      }
+    })
+  }
+
   getFeatureMedias(){
 
     return axios({
@@ -354,6 +378,20 @@ class DataService{
         'Authorization': this.userToken
       }})
 
+  }
+
+  resetPassword(email){
+    return axios({
+      method: 'POST', url: `${API_SERVER}/api/account/reset_password/init`,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': this.userToken
+      },
+      data:
+        {
+          'emailAddress': email
+        }
+    })
   }
 }
 

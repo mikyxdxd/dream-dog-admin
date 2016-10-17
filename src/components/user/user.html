@@ -16,6 +16,11 @@
                 Edit
               </button>
             </div>
+            <div id="resetCtr">
+              <button class="ui green primary button" @click="resetPassword(user.email)">
+                Reset Password
+              </button>
+            </div>
             <div id="saveCtr"  v-show="showEdit">
               <button class="ui green button" @click="updateUser()">
                 Update
@@ -67,17 +72,17 @@
             <span  v-show="!showEdit">{{user.bio}}</span>
             <textarea v-show="showEdit" v-model="userCpy.bio"></textarea>
           </div>
-          <div class="sec">Stats:
-            <div class="sub_list">
-               <div>numOfBookmarks: {{user.stats.numOfBookmarks}}</div>
-               <div>numOfFollowers: {{user.stats.numOfFollowers}}</div>
-               <div>numOfFollowings: {{user.stats.numOfFollowings}}</div>
-               <div>numOfMedia: {{user.stats.numOfMedia}}</div>
-              <div>numOfPubEvents: {{user.stats.numOfPubEvents}}</div>
-              <div>numOfTotalEvents: {{user.stats.numOfTotalEvents}}</div>
-              <div>numOfTotalLikes: {{user.stats.numOfTotalLikes}}</div>
-            </div>
-          </div>
+          <!--<div class="sec">Stats:-->
+            <!--<div class="sub_list">-->
+               <!--<div>numOfBookmarks: {{user.stats.numOfBookmarks}}</div>-->
+               <!--<div>numOfFollowers: {{user.stats.numOfFollowers}}</div>-->
+               <!--<div>numOfFollowings: {{user.stats.numOfFollowings}}</div>-->
+               <!--<div>numOfMedia: {{user.stats.numOfMedia}}</div>-->
+              <!--<div>numOfPubEvents: {{user.stats.numOfPubEvents}}</div>-->
+              <!--<div>numOfTotalEvents: {{user.stats.numOfTotalEvents}}</div>-->
+              <!--<div>numOfTotalLikes: {{user.stats.numOfTotalLikes}}</div>-->
+            <!--</div>-->
+          <!--</div>-->
         </div>
       </div>
 

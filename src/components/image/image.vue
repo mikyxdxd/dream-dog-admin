@@ -8,6 +8,7 @@
 
               updating:false,
               detailImage:null,
+              selectOpt: ''
 
             }
         },
@@ -38,6 +39,14 @@
           })
 
         },
+
+        reportImage(){
+          dataServices.reportImage(this.currmedia, this.selectOpt).then((res)=>{
+            if(res.data.result == 'OK'){
+              toastr.success(`${this.currmedia.id} has been reported by ${this.selectOpt} reason`);
+            }
+          })
+        }
 //        getMediaViaMediaId(){
 //          dataServices.getMediaViaMediaId(this.currmedia).then((res)=>{
 //            this.detailImage = res.data;
