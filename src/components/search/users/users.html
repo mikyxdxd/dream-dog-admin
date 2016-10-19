@@ -1,6 +1,6 @@
 <div id="users">
   <div id="users_con" class="ui container">
-    <table class="ui fixed single line celled striped table">
+    <table class="ui fixed single line celled striped table" v-if="!fetching">
       <thead>
         <tr>
           <th>UserName</th>
@@ -29,6 +29,10 @@
         </tr>
       </tbody>
     </table>
+    <div class="ui pagination menu" v-if="!fetching">
+      <a class="item" :class="{disabled: disablePrev}" @click="prevPage()">Previous</a>
+      <a class="item" :class="{disabled: disableNext}" @click="nextPage()">Next</a>
+    </div>
     <loadinganimation v-if="fetching"></loadinganimation>
   </div>
   <!--<div id="users_con" class="ui container">-->

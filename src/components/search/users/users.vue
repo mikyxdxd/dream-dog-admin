@@ -16,13 +16,41 @@
             return{
               pageNum:0,
               pageSize:50,
+              currSize: 0,
               usersList:[],
-              fetching:true
+              fetching:true,
+              disablePrev: true,
+              disableNext: false
             }
         },
+      watch:{
+          'pageNum': function(val, oldVal){
+               if(val == 0){
+                 this.disablePrev = true;
+               }else{
+                 this.disablePrev = false;
+               }
+          },
+          'currSize': function(val, oldVal){
+            if(val < 50){
+              this.disableNext = true;
+            }else{
+              this.disableNext = false;
+            }
+          }
+      },
       methods:{
-        deleteDogViaId(dog,$index){
-
+        nextPage(){
+          this.pageNum++;
+          if(!this.disableNext){
+            this.fetchAllUsers();
+          }
+        },
+        prevPage(){
+          this.pageNum--;
+          if(!this.disablePrev){
+            this.fetchAllUsers();
+          }
         },
         fetchAllUsers(){
           this.fetching = true;
@@ -35,6 +63,7 @@
           }else {
             dataServices.getAllUsers(this.pageNum, this.pageSize).then((res) => {
               this.updateUsersList(res.data.data);
+              this.currSize = res.data.data.length;
               this.fetching = false;
             })
           }
@@ -50,15 +79,7 @@
           if(keyA > keyB) return 1;
           return 0;
         });
-        },
-        updateBreed(breed,index){
-          this.breedsList.$set(index, Object.assign({}, breed, {$$updating:true}));
-          dataServices.updateBreedViaId(breed.id,breed).then((res)=>{
-            this.breedsList.$set(index, Object.assign({}, breed, {$$updating:false}));
-            this.breedsList.$set(index,res.data.data);
-            toastr.success(`Breed ${res.data.data.id} has been upated`)
-          })
-        },
+        }
       },
         components:{
           loadinganimation:require('../../loadinganimation/loadinganimation.vue')
