@@ -23,15 +23,15 @@
           </td>
           <td>{{user.signature}}</td>
           <td>
-            <a class="ui medium button" v-link="{'path':`/user/${user.id}`}">Detail</a>
+            <a class="ui medium button blue" v-link="{'path':`/user/${user.id}`}">Detail</a>
             <!--<a class="ui medium button" @click="resetPassword(user.email)">ResetPassword</a>-->
           </td>
         </tr>
       </tbody>
     </table>
-    <div class="ui pagination menu" v-if="!fetching">
-      <a class="item" :class="{disabled: disablePrev}" @click="prevPage()">Previous</a>
-      <a class="item" :class="{disabled: disableNext}" @click="nextPage()">Next</a>
+    <div class="ui pagination menu center-pagination" v-if="!fetching">
+      <a class="item center-item" :class="{disabled: disablePrev}" @click="prevPage()">Previous</a>
+      <a class="item center-item" :class="{disabled: disableNext}" @click="nextPage()">Next</a>
     </div>
     <loadinganimation v-if="fetching"></loadinganimation>
   </div>
